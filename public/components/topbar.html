@@ -5,18 +5,15 @@
         box-sizing: border-box;
     
     }
-    
     body {
-        margin: 0;
+        margin: 50 px;
         font-family: 'work sans', sans-serif;
         font-weight: 400;
         background-repeat: no-repeat;
         background-size: cover;
         padding:0 0 200px 0;
         background: linear-gradient(to left, #748697, #b3b1b3, #748697);
-    
     }
-    
     .header{
         background: rgb(198, 198, 198);
         height: 100px;
@@ -24,9 +21,6 @@
         display: flex;
         justify-content: space-between;
         box-shadow: 3px 0 rgba(233, 246, 246, 0.82);
-    
-    
-    
     }
     .nav ul {
         display: flex;
@@ -34,9 +28,6 @@
         list-style-type: none;
         padding:0;
         height:100%;
-    
-    
-    
     }
     .nav ul li a {
         text-decoration: none;
@@ -44,7 +35,7 @@
         font-family: "Times New Roman";
         font-size: 25px;
         display: block;
-        width:175px;
+        width: 175px;
         text-align: center;
         padding:10px 0;
     }
@@ -66,14 +57,25 @@
     }
     
 </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>%%PLACEHOLDER_TITLE%%</title>
+</head>
+<body>
 <div class="header">
-    <img class="logo" src="../coding_img.png" alt="Logo"/>
+    <img class="logo" src="..\components\coding_img.png" alt="Logo"/>
     <div class="container">
         <nav class="nav">
             <ul>
-                <li><a href="WorkCalendar.html">Calender</a></li>
-                <li><a href="createAssigment.html">Assignment</a></li>
-                <li><a href="AssignmentList.html">Assignment List</a></li>
+                <li><a href="../introduction" id="%%currentPage1%%">Intro & datatypes</a></li>
+                <li><a href="../firstServer" id="%%currentPage2%%">First server</a></li>
+                <li><a href="../servingHTML" id="%%currentPage3%%">Serving HTML</a></li>
+                <li><a href="../SSR" id="%%currentPage4%%">SSR</a></li>
             </ul>
         </nav>
     </div>
