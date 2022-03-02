@@ -11,12 +11,13 @@ const fs = require("fs")
 
 
 const nav = fs.readFileSync("./public/components/topbar.html").toString()
-const frontPageBody = fs.readFileSync("./public/frontpage.html").toString()
-const introPageBody = fs.readFileSync("./public/introduction.html").toString()
-const firstServerPageBody = fs.readFileSync("./public/firstServer.html").toString()
-const servingPageBody = fs.readFileSync("./public/servingHTML.html").toString()
-const ssrPageBody = fs.readFileSync("./public/SSR.html").toString()
-const expressPageBody = fs.readFileSync("./public/express.html").toString()
+const current = fs.readFileSync("./public/components/currentPage.html").toString()
+const frontPageBody = fs.readFileSync("./public/frontpage.html").toString() + current
+const introPageBody = fs.readFileSync("./public/introduction.html").toString() + current
+const firstServerPageBody = fs.readFileSync("./public/firstServer.html").toString() + current
+const servingPageBody = fs.readFileSync("./public/servingHTML.html").toString() + current
+const ssrPageBody = fs.readFileSync("./public/SSR.html").toString() + current
+const expressPageBody = fs.readFileSync("./public/express.html").toString() + current
 
 
 const frontpagePage = nav.replace("%%PLACEHOLDER_TITLE%%", "Coding practices") + frontPageBody
@@ -34,27 +35,27 @@ const expresspageBody = nav.replace("%%PLACEHOLDER_TITLE%%", "Express") + expres
 
 app.get("/", (req, res) => {
     res.send(frontpagePage)
-});
+})
 
 app.get("/introduction", (req, res) => {
     res.send(intropageBody)
-});
+})
 
 app.get("/firstServer", (req, res) => {
     res.send(firstServerpageBody)
-});
+})
 
 app.get("/servingHTML", (req, res) => {
     res.send(servingpageBody)
-});
+})
 
 app.get("/SSR", (req, res) => {
     res.send(ssrpageBody)
-});
+})
 
 app.get("/express", (req, res) => {
     res.send(expresspageBody)
-});
+})
 
 const PORT = 5000
 app.listen(process.env.PORT || "5000", (error) => {
