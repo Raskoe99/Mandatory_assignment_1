@@ -7,12 +7,21 @@
         During our second week we learned about advanced JS like hoisting and how to use express. 
         Hoisting is when a declared variable is used before it is initialized, and depending on 
         which datatype is used, we get a different result. Const gives a syntax error, (and the 
-        code won't run), the Let type gives the value "undefined" and so does Var. 
+        code won't run) and the Let type gives the value "undefined". Var, however, is a global 
+        variable, and can therefore be hoisted succesfully. 
         Express is an application framework, that allows us to build an API using javascript. 
         This means that we can create a CRUDable API, with (in our case) beer types, and choose 
         the port we want our app to listen to.
-    </h4>
+    </h4><br>
+    <div class="pictures">
+        <img src="../components/img/datatypes.png" alt="getMethod"/>
+    </div>
 </div>
 </body>
-<script></script>
+<script>
+    function changetocurrent() {
+        document.getElementById("firstServer").id = "current"
+    }
+    changetocurrent()
+</script>
 </html>

@@ -11,13 +11,12 @@ const fs = require("fs")
 
 
 const nav = fs.readFileSync("./public/components/topbar.html").toString()
-const current = fs.readFileSync("./public/components/currentPage.html").toString()
-const frontPageBody = fs.readFileSync("./public/frontpage.html").toString() + current
-const introPageBody = fs.readFileSync("./public/introduction.html").toString() + current
-const firstServerPageBody = fs.readFileSync("./public/firstServer.html").toString() + current
-const servingPageBody = fs.readFileSync("./public/servingHTML.html").toString() + current
-const ssrPageBody = fs.readFileSync("./public/SSR.html").toString() + current
-const expressPageBody = fs.readFileSync("./public/express.html").toString() + current
+const frontPageBody = fs.readFileSync("./public/frontpage.html").toString()
+const introPageBody = fs.readFileSync("./public/introduction.html").toString()
+const firstServerPageBody = fs.readFileSync("./public/firstServer.html").toString()
+const servingPageBody = fs.readFileSync("./public/servingHTML.html").toString()
+const ssrPageBody = fs.readFileSync("./public/SSR.html").toString()
+const expressPageBody = fs.readFileSync("./public/express.html").toString()
 
 
 const frontpagePage = nav.replace("%%PLACEHOLDER_TITLE%%", "Coding practices") + frontPageBody
